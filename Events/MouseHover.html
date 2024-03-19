@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Handling opgave</title>
+
+</head>
+<body>
+    <div id="square" style="width: 100px; height: 100px; background-color: red;"></div>
+
+<br />
+<button id="resizeButton">Knap</button>
+
+    <script>
+        // OPGAVE 1
+        const square = document.getElementById("square");
+        square.addEventListener("mouseover", function() {
+            this.style.backgroundColor = "blue";
+        });
+        square.addEventListener("mouseout", function() {
+            this.style.backgroundColor = "red";
+        });
+
+       // OPGAVE 2 
+        const resizeButton = document.getElementById("resizeButton");
+        resizeButton.addEventListener("mouseover", function() {
+            this.style.width = "150px";
+        });
+        resizeButton.addEventListener("mouseout", function() {
+            this.style.width = "100px";
+        });
+
+
+
+    </script>
+</body>
+</html>

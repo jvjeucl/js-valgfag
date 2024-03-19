@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Handling opgave</title>
+<style>
+    #colorChange{
+    width: 100px;
+    height: 100px;
+    }
+</style>
+</head>
+<body>
+  
+    <div id="timer"></div>
+
+    <div id="colorChange"></div>
+
+<br /><br /><br />
+
+
+    <script>
+        // OPGAVE 1
+        let seconds = 0;
+        const timer = document.getElementById("timer");
+        
+        setInterval(function() {
+            seconds++;
+            timer.textContent = "Tid: " + seconds + " sekunder";
+        }, 1000);
+          
+        
+
+       // OPGAVE 2 
+       const colorChange = document.getElementById("colorChange");
+
+        setTimeout(function() {
+            colorChange.style.backgroundColor = "green";
+        }, 3000);
+
+       
+
+
+
+    </script>
+</body>
+</html>

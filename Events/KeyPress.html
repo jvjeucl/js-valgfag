@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Handling opgave</title>
+
+</head>
+<body>
+    <p>Indtast nogle bogstaver</p>
+    <input id="myInput" type="text">
+
+<br />
+<p>Tryk på enter</p>
+<input id="textInput" type="text">
+
+
+    <script>
+        // OPGAVE 1
+        const input = document.getElementById("myInput");
+        input.addEventListener("keypress", function(event) {
+            console.log("Tastetryk: " + event.key);
+        });
+
+
+       // OPGAVE 2 
+       const textInput = document.getElementById("textInput");
+       textInput.addEventListener("keyup", function(event) {
+           if (event.key === "Enter") {
+               alert("Enter-tasten blev trykket!");
+           }
+       });
+       
+
+
+
+    </script>
+</body>
+</html>

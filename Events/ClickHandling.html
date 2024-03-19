@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Handling opgave</title>
+
+</head>
+<body>
+    <button id="myButton">Klik her</button>
+
+    <img id="myImage" src="billede1.jpeg" width="100", height="100">
+
+    <script>
+        const button = document.getElementById("myButton");
+        button.addEventListener("click", function() {
+        this.textContent = "Klikket!";
+});
+
+
+    const image = document.getElementById("myImage");   
+    image.addEventListener("click", function() {
+        if (this.src.endsWith("billede1.jpeg")) {
+            this.src = "billede2.jpeg";
+        } else {
+            this.src = "billede1.jpeg";
+        }
+    });
+
+
+    </script>
+</body>
+</html>

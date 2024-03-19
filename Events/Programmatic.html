@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Handling opgave</title>
+
+</head>
+<body>
+  
+    <ul id="list">
+        <li>Element 1</li>
+        <li>Element 2</li>
+        <li>Element 3</li>
+    </ul>
+    
+
+<br /><br /><br />
+<button id="addButton">Tilføj knap</button>
+<div id="buttonContainer"></div>
+
+
+    <script>
+        // OPGAVE 1
+        const listItems = document.querySelectorAll("#list li");
+
+        listItems.forEach(function(item) {
+            item.addEventListener("click", function() {
+                alert("Klik på " + this.textContent);
+            });
+        });
+
+        
+
+       // OPGAVE 2 
+       const addButton = document.getElementById("addButton");
+        const buttonContainer = document.getElementById("buttonContainer");
+
+        addButton.addEventListener("click", function() {
+            const newButton = document.createElement("button");
+            newButton.textContent = "Ny knap";
+            buttonContainer.appendChild(newButton);
+        });
+
+       
+
+
+
+    </script>
+</body>
+</html>

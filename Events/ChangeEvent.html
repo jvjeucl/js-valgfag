@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Handling opgave</title>
+
+</head>
+<body>
+    <select id="colorSelect">
+        <option value="red">Rød</option>
+        <option value="green">Grøn</option>
+        <option value="blue">Blå</option>
+    </select>
+
+    <br />
+    <div id="checkboxes">
+        <input type="checkbox" id="checkbox1">
+        <input type="checkbox" id="checkbox2">
+        <input type="checkbox" id="checkbox3">
+    </div>
+    <div id="checkboxCount"></div>
+    
+    <script>
+        const colorSelect = document.getElementById("colorSelect");
+        colorSelect.addEventListener("change", function() {
+            document.body.style.backgroundColor = this.value;
+        });
+
+
+
+        const checkboxes = document.querySelectorAll("input[type='checkbox']");
+        const checkboxCount = document.getElementById("checkboxCount");
+        
+        checkboxes.forEach(function(checkbox) {
+            checkbox.addEventListener("change", function() {
+                let checkedCount = document.querySelectorAll("input[type='checkbox']:checked").length;
+                checkboxCount.textContent = "Antal markerede: " + checkedCount;
+            });
+        });
+        
+
+    </script>
+</body>
+</html>
