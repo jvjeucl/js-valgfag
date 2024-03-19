@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opgave 7</title>
+</head>
+<body>
+    <form onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Navn"><br>
+        <input type="email" id="email" placeholder="Email"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p id="error-message" style="color: red; display: none;">Felterne skal udfyldes korrekt</p>
+
+    <script>
+        function validateForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            if (name.trim() === '' || email.trim() === '') {
+                document.getElementById('error-message').style.display = 'block';
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>

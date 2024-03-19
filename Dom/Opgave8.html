@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opgave 8</title>
+</head>
+<body>
+    <div id="color-div" style="width: 100px; height: 100px; background-color: red;"></div>
+    <button onclick="changeColor()">Change Color</button>
+
+    <script>
+        function changeColor() {
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            document.getElementById('color-div').style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+</html>

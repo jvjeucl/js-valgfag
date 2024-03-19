@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opgave 3</title>
+</head>
+<body>
+    <img src="first.jpg" alt="First Image" id="image">
+    <button onclick="prevImage()">Forrige</button>
+    <button onclick="nextImage()">Næste</button>
+
+    <script>
+        const images = ['first.jpg', 'second.jpg', 'third.jpg'];
+        let currentImageIndex = 0;
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            document.getElementById('image').src = images[currentImageIndex];
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            document.getElementById('image').src = images[currentImageIndex];
+        }
+    </script>
+</body>
+</html>

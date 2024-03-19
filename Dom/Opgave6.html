@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opgave 6</title>
+</head>
+<body>
+    <ul id="list">
+        <li>Element 1 <button onclick="removeListItem(this)">Fjern</button></li>
+        <li>Element 2 <button onclick="removeListItem(this)">Fjern</button></li>
+        <li>Element 3 <button onclick="removeListItem(this)">Fjern</button></li>
+    </ul>
+
+    <script>
+        function removeListItem(button) {
+            const listItem = button.parentNode;
+            listItem.parentNode.removeChild(listItem);
+        }
+    </script>
+</body>
+</html>
