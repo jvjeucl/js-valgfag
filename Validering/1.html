@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="email" id="email">
+        <button type="button" onclick="validateEmail()">Send</button>
+    </form>
+    
+    <script>
+        function validateEmail() {
+            var email = document.getElementById("email").value;
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+                alert("Gyldig e-mailadresse!");
+            } else {
+                alert("Ugyldig e-mailadresse!");
+            }
+        }
+        
+    </script>
+</body>
+</html>

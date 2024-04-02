@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="date" placeholder="YYYY-MM-DD">
+        <button type="button" onclick="validateDate()">Send</button>
+    </form>
+    
+    
+    <script>
+        function validateDate() {
+            var date = document.getElementById("date").value;
+            if (Date.parse(date)) {
+                alert("Gyldig dato!");
+            } else {
+                alert("Ugyldig datoformat!");
+            }
+        }
+        
+        
+    </script>
+</body>
+</html>

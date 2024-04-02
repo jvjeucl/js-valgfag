@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="phoneNumber">
+        <button type="button" onclick="validatePhoneNumber()">Send</button>
+    </form>
+    
+    
+    <script>
+        function validatePhoneNumber() {
+            var phoneNumber = document.getElementById("phoneNumber").value;
+            if (/^(?:\+?45)?(?:\d{8})$/.test(phoneNumber)) {
+                alert("Gyldigt telefonnummer!");
+            } else {
+                alert("Ikke et gyldigt telefonnummer!");
+            }
+        }
+        
+        
+    </script>
+</body>
+</html>

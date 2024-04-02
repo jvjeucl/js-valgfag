@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm" onsubmit="return validateForm()">
+        <input type="email" id="email">
+        <input type="password" id="password">
+        <!-- Add more input fields as needed -->
+        <button type="submit">Send</button>
+    </form>
+    
+    
+    <script>
+        function validateForm() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            // Add more variables for other fields
+            
+            if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+                alert("Ugyldig e-mailadresse!");
+                return false;
+            }
+            if (password.length < 8) {
+                alert("Adgangskoden skal være mindst 8 tegn lang!");
+                return false;
+            }
+            // Add more validation conditions for other fields
+            
+            return true;
+        }
+        
+        
+    </script>
+</body>
+</html>

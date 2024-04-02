@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="postalCode">
+        <button type="button" onclick="validatePostalCode()">Send</button>
+    </form>
+    
+    
+    <script>
+        function validatePostalCode() {
+            var postalCode = document.getElementById("postalCode").value;
+            if (/^\d{4}$/.test(postalCode)) {
+                alert("Gyldigt postnummer!");
+            } else {
+                alert("Ikke et gyldigt postnummer!");
+            }
+        }
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="password" id="password">
+        <button type="button" onclick="validatePassword()">Send</button>
+    </form>
+    
+    
+    <script>
+        function validatePassword() {
+            var password = document.getElementById("password").value;
+            if (password.length >= 8) {
+                alert("Adgangskode er gyldig!");
+            } else {
+                alert("Adgangskoden skal være mindst 8 tegn lang!");
+            }
+        }
+        
+        
+    </script>
+</body>
+</html>
