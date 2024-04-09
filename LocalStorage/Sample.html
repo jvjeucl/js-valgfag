@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage Example</title>
+</head>
+<body>
+    <script>
+// Gem data i LocalStorage
+localStorage.setItem('username', 'John');
+
+// Hent data fra LocalStorage
+var username = localStorage.getItem('username');
+console.log(username); // Output: John
+
+// Fjern data fra LocalStorage
+localStorage.removeItem('username');
+
+// Tjek om en nøgle eksisterer i LocalStorage
+if (localStorage.getItem('username') !== null) {
+    console.log('Username exists in LocalStorage');
+} else {
+    console.log('Username does not exist in LocalStorage');
+}
+
+// Tøm hele LocalStorage
+localStorage.clear();
+
+</script>
+</body>
+</html>

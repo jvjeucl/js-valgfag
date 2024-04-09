@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage Example</title>
+</head>
+<body>
+    <script>
+        // Gem data i Session Storage
+        sessionStorage.setItem('username', 'John');
+
+        // Hent data fra Session Storage
+        var username = sessionStorage.getItem('username');
+        console.log(username); // Output: John
+
+        // Fjern data fra Session Storage
+        sessionStorage.removeItem('username');
+
+        // Tøm hele Session Storage
+        sessionStorage.clear();
+    </script>
+</body>
+</html>
