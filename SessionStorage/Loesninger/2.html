@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check if Key Exists</title>
+</head>
+<body>
+    <script>
+        function checkKeyExist(key) {
+            return localStorage.getItem(key) !== null;
+        }
+        var keyToCheck = 'username';
+        if (checkKeyExist(keyToCheck)) {
+            alert('Key "' + keyToCheck + '" exists in local storage!');
+        } else {
+            alert('Key "' + keyToCheck + '" does not exist in local storage!');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List App</title>
+</head>
+<body>
+    <input type="text" id="item" placeholder="Enter item">
+    <button onclick="addItem()">Add Item</button>
+    <ul id="shopping-list"></ul>
+    <script>
+        function addItem() {
+            var item = document.getElementById('item').value;
+            var shoppingList = JSON.parse(localStorage.getItem('shoppingList')) || [];
+            shoppingList.push(item);
+            localStorage.setItem('shoppingList', JSON.stringify(shoppingList));
+            displayShoppingList();
+        }
+        function displayShoppingList() {
+            var shoppingList = JSON.parse(localStorage.getItem('shoppingList')) || [];
+            var list = document.getElementById('shopping-list');
+            list.innerHTML = '';
+            shoppingList.forEach(function(item) {
+                var li = document.createElement('li');
+                li.textContent = item;
+                list.appendChild(li);
+            });
+        }
+        displayShoppingList();
+    </script>
+</body>
+</html>

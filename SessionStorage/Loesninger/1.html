@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage Example</title>
+</head>
+<body>
+    <input type="text" id="username" placeholder="Enter your username">
+    <input type="email" id="email" placeholder="Enter your email">
+    <button onclick="saveData()">Save Data</button>
+    <script>
+        function saveData() {
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            localStorage.setItem('username', username);
+            localStorage.setItem('email', email);
+            alert('Data saved successfully!');
+        }
+        // Load saved data
+        var savedUsername = localStorage.getItem('username');
+        var savedEmail = localStorage.getItem('email');
+        if(savedUsername && savedEmail) {
+            document.getElementById('username').value = savedUsername;
+            document.getElementById('email').value = savedEmail;
+        }
+    </script>
+</body>
+</html>
